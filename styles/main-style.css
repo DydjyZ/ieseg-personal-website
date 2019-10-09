@@ -1,0 +1,108 @@
+html {
+    overflow: hidden;
+    /* c'est une page qui n'est pas scrollable tout ça tout ça */
+
+    --main-text-color: #00D1B2;
+    /* J'déclare ma couleur principale ... */
+}
+
+body {
+    border: solid 7px var(--main-text-color);
+    margin: 5px;
+}
+
+
+#img-moi {
+    position: absolute;
+    bottom: -5px;
+    right: 0px;
+    width: 450px;
+    transition: all 0.3s;
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .5));
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .5));
+}
+
+#img-moi:hover {
+    width: 500px;
+    -webkit-filter: drop-shadow(12px 12px 12px rgba(0, 0, 0, .5));
+    filter: drop-shadow(12px 12px 12px rgba(0, 0, 0, .5));
+}
+
+.column {
+    text-align: center;
+}
+
+.color-primary {
+    color: var(--main-text-color);
+}
+
+.centered-content {
+    margin: auto;
+}
+
+#mon-super-texte-contenant-mon-nom {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-weight: 900;
+    font-size: 6em;
+    line-height: 80%;
+}
+
+#img-rocket-animated {
+    position: absolute;
+    top: 40%;
+    z-index: 9999;
+}
+
+#img-rocket-animated:hover ~ #div-buzz {
+    animation: buzz-animation 2s;
+    animation-fill-mode: forwards;
+}
+
+#img-rocket-animated:hover {
+    animation: rocket-animation 2s;
+    animation-fill-mode: forwards;
+}
+
+footer {
+    color: var(--main-text-color);
+    font-weight: 900;
+    font-size: x-large;
+    padding: 10px;
+}
+
+#div-buzz {
+    position: absolute;
+    bottom: -20vh;
+    font-weight: 900;
+    font-size: 6em;
+    color: var(--main-text-color);
+    width: 100%;
+    text-align: center;
+    text-shadow: 0px 0px 10px #000000;
+}
+
+@keyframes rocket-animation {
+    0% {
+        transform: translateX(0px) rotate(-10deg)
+    }
+
+    50% {
+        transform: translate(300px, -100px) rotate(-40deg);
+    }
+
+    100% {
+        transform: translate(1000px, -600px) rotate(-30deg);
+    }
+}
+
+@keyframes buzz-animation {
+    0% {}
+
+    50% {}
+
+    100% {
+        transform: translate(0, -130vh) scale(1.3);
+    }
+}

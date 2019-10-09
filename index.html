@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mon super site</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+        integrity="sha256-vK3UTo/8wHbaUn+dTQD0X6dzidqc5l7gczvH+Bnowwk=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="styles/main-style.css">
+
+    <style>
+        .main-content {
+            height: calc(80vh - 24px);
+            display: flex;
+        }
+
+        footer {
+            height: 20vh;
+            display: flex;
+        }
+
+        .button {
+            transform: scale(1.8);
+            transition: all 0.3s;
+        }
+        .button::after {
+            content: "Mon CV";
+        }
+
+        .button:hover::after {
+            content: "Eh nooon !";
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-content">
+
+        <h1 id="mon-super-texte-contenant-mon-nom" class="color-primary">
+            DYLAN
+            <br />
+            TEIXEIRA
+        </h1>
+
+        <div class="centered-content">
+            <button class="button is-primary is-large">
+                <!-- J'affiche le content via un ::after content en CSS pour faire une transition css (flemme de mettre du JS tout ça tout ça) -->
+            </button>
+        </div>
+
+        <img src="imgs/dylan.png" id="img-moi">
+        
+        <img src="imgs/rocket.png" id="img-rocket-animated">
+        <div id="div-buzz"> Vers l'infini et l'au delà</div>
+
+    </div>
+
+    <footer>
+        Je vous avoue que je suis flemmard, après tout je suis developpeur fullstack.
+        <br/>
+        Du coup je peux me permettre d'être flemmard.
+        <br />
+        J'ai animé la fusée et ma photo, hé hé.
+    </footer>
+</body>
+
+</html>
