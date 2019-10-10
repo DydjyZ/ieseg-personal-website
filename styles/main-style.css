@@ -1,16 +1,60 @@
 html {
     overflow: hidden;
     /* c'est une page qui n'est pas scrollable tout ça tout ça */
-
     --main-text-color: #00D1B2;
     /* J'déclare ma couleur principale ... */
 }
 
-body {
-    border: solid 7px var(--main-text-color);
-    margin: 5px;
+@media screen and (min-width: 640px) {
+    body {
+        border: solid 7px var(--main-text-color);
+        margin: 5px;
+        width: calc(100% - 10px);
+    }
+
+    #mon-super-texte-contenant-mon-nom {
+        font-size: 6em;
+    }
+
+    .main-content {
+        height: calc(80vh - 24px);
+        display: flex;
+    }
+    
+    footer {
+        height: 20vh;
+        display: flex;
+    }
 }
 
+/* je cache toutes mes supers animations sur mobile :'( */
+@media screen and (max-width: 640px) {
+    #img-moi {
+        display: none;
+    }
+
+    #img-rocket-animated {
+        display: none;
+    }
+
+    #div-buzz {
+        display: none;
+    }
+
+    #mon-super-texte-contenant-mon-nom {
+        font-size: 3em;
+    }
+    .main-content {
+        height: calc(60vh - 24px);
+        display: flex;
+    }
+    
+    footer {
+        height: 40vh;
+        display: flex;
+        text-align: center;
+    }
+}
 
 #img-moi {
     position: absolute;
@@ -45,7 +89,6 @@ body {
     top: 5px;
     left: 5px;
     font-weight: 900;
-    font-size: 6em;
     line-height: 80%;
 }
 
@@ -55,7 +98,7 @@ body {
     z-index: 9999;
 }
 
-#img-rocket-animated:hover ~ #div-buzz {
+#img-rocket-animated:hover~#div-buzz {
     animation: buzz-animation 2s;
     animation-fill-mode: forwards;
 }
@@ -81,6 +124,29 @@ footer {
     width: 100%;
     text-align: center;
     text-shadow: 0px 0px 10px #000000;
+}
+
+#icon-linkedin {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#icon-linkedin i {
+    color: #00d1b2;
+}
+
+.button {
+    transform: scale(1.8);
+    transition: all 0.3s;
+}
+
+.button::after {
+    content: "Mon CV";
+}
+
+.button:hover::after {
+    content: "Eh nooon !";
 }
 
 @keyframes rocket-animation {
