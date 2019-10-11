@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mon CV</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"
+        integrity="sha256-vK3UTo/8wHbaUn+dTQD0X6dzidqc5l7gczvH+Bnowwk=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="styles/main-style.css">
+    <link rel="stylesheet" href="styles/swiper.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+    <style>
+        /* quick and dirty */
+        body {
+            border: none ! important;
+            margin: 0 !important;
+            background: url(imgs/bg-petitponey.jpg);
+            background-size: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" id="slide1" style="background: hsl(348, 100%, 61%);">
+                <div>
+                    <img src="imgs/dylan2.png" id="img-moi">
+                    <h1 class="title is-1">
+                        Formations
+                    </h1>
+                    <br />
+
+                    <div class="columns">
+                        <div class="column is-full-mobile is-half-desktop container-item text-left">
+                            <h2 class="title is-5 no-margin">IÉSEG School of management</h2>
+                            <p>Master Marketing Digital & Innovation</p>
+                            <i>2019-2021</i>
+                        </div>
+                        <div class="column is-full-mobile is-half-desktop container-item text-left">
+                            <h2 class="title is-5 no-margin">ISTEC Ecole supérieure de commerce et marketing</h2>
+                            <p>Bachelor Marketing digital</p>
+                            <i>2018-2019</i>
+                        </div>
+                    </div>
+
+                    <div class="columns">
+                        <div class="column is-full-mobile is-half-desktop container-item text-left">
+                            <h2 class="title is-5 no-margin">Ecole Sup' Paris</h2>
+                            <p>BTS Management des Unités Commerciales</p>
+                            <i>2016-2018</i>
+                        </div>
+                        <div class="column is-full-mobile is-half-desktop container-item text-left">
+                            <h2 class="title is-5 no-margin">Gendarmerie Nationale</h2>
+                            <p>Diplôme de gendarme adjoint</p>
+                            <i>2015</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" id="slide2" style="background: hsl(48, 100%, 67%);">
+                <div>
+                    <img src="imgs/dylan3.png" id="img-moi">
+                    <h1 class="title is-1">
+                        Expériences professionnelles
+                    </h1>
+
+                    <br />
+
+                    <div class="columns">
+                        <div class="column is-full-mobile is-half-desktop container-item text-left">
+                            <h2 class="title is-5 no-margin">Remembr</h2>
+                            <p>Co-fondateur / CTO</p>
+                            <i>Depuis 2017</i>
+                        </div>
+                        <div class="column is-full-mobile is-half-desktop container-item text-left">
+                            <h2 class="title is-5 no-margin">KoopLib</h2>
+                            <p>Fondateur - side project</p>
+                            <i>Depuis 2017</i>
+                        </div>
+                    </div>
+
+                    <div class="columns">
+                        <div class="column is-full-mobile is-half-desktop container-item text-left">
+                            <h2 class="title is-5 no-margin">Badapps studio</h2>
+                            <p>Fondateur - side project</p>
+                            <i>Depuis 2015</i>
+                        </div>
+                        <div class="column is-full-mobile is-half-desktop container-item text-left">
+                            <h2 class="title is-5 no-margin">La compagnie du lit</h2>
+                            <p>Conseiller en alternance</p>
+                            <i>2016-2018</i>
+                        </div>
+                    </div>
+
+                    <div class="columns">
+                        <div class="column is-full-mobile is-half-desktop container-item text-left">
+                            <h2 class="title is-5 no-margin">Gendarme Adjoint</h2>
+                            <p>Gendarmerie Nationale</p>
+                            <i>2014-2016</i>
+                        </div>
+                        <div class="column is-full-mobile is-half-desktop container-item text-left">
+                            <h2 class="title is-5 no-margin">Croix-rouge française</h2>
+                            <p>Formateur de secours (PSC1)</p>
+                            <i>2013-2014</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="swiper-slide" id="slide3" style="background: hsl(204, 86%, 53%);">
+                <img src="imgs/dylan-flying.png" id="img-flying">
+            <div>
+                <h1 class="title is-1">
+                    Mes petits plaisirs
+                </h1>
+                <p>
+                    (passez la souris sur moi, hé hé)
+                </p>
+
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+            effect: 'cube',
+            grabCursor: true,
+            cubeEffect: {
+                shadow: true,
+                slideShadows: true,
+                shadowOffset: 20,
+                shadowScale: 0.94,
+            },
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        })
+    </script>
+
+</body>
+
+</html>

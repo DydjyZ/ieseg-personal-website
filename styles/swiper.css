@@ -1,0 +1,30 @@
+div.swiper-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.swiper-slide {
+    display: flex;
+}
+
+.swiper-slide>div {
+    margin: auto 8vw;
+}
+
+#slide1 * {
+    color: white;
+}
+
+#slide2 * {
+    color: rgb(48, 48, 48);
+}
+
+#slide3 * {
+    color: white;
+}
+
+
+.container-item {
+    margin-top: 20px;
+    text-align: left;
+}

@@ -5,6 +5,19 @@ html {
     /* J'déclare ma couleur principale ... */
 }
 
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.no-margin {
+    margin: 0 !important;
+
+}
+
 @media screen and (min-width: 640px) {
     body {
         border: solid 7px var(--main-text-color);
@@ -20,7 +33,7 @@ html {
         height: calc(80vh - 24px);
         display: flex;
     }
-    
+
     footer {
         height: 20vh;
         display: flex;
@@ -44,11 +57,12 @@ html {
     #mon-super-texte-contenant-mon-nom {
         font-size: 3em;
     }
+
     .main-content {
         height: calc(60vh - 24px);
         display: flex;
     }
-    
+
     footer {
         height: 40vh;
         display: flex;
@@ -66,8 +80,40 @@ html {
     filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .5));
 }
 
-#img-moi:hover {
+#img-flying {
+    position: absolute;
+    top: 50px;
+    right: -20%;
+    height: 300px;
+    transition: all 0.3s;
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .5));
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .5));
+}
+
+#img-flying:hover {
+    animation: fly-animation 2s;
+    animation-fill-mode: forwards;
+}
+
+
+#img-moi-left {
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    width: 450px;
+    transition: all 0.3s;
+    -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .5));
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .5));
+}
+
+#img-moi:hover,
+#img-moi-left:hover {
     width: 500px;
+    -webkit-filter: drop-shadow(12px 12px 12px rgba(0, 0, 0, .5));
+    filter: drop-shadow(12px 12px 12px rgba(0, 0, 0, .5));
+}
+
+#img-flying:hover {
     -webkit-filter: drop-shadow(12px 12px 12px rgba(0, 0, 0, .5));
     filter: drop-shadow(12px 12px 12px rgba(0, 0, 0, .5));
 }
@@ -141,14 +187,6 @@ footer {
     transition: all 0.3s;
 }
 
-.button::after {
-    content: "Mon CV";
-}
-
-.button:hover::after {
-    content: "Eh nooon !";
-}
-
 @keyframes rocket-animation {
     0% {
         transform: translateX(0px) rotate(-10deg)
@@ -160,6 +198,17 @@ footer {
 
     100% {
         transform: translate(1000px, -600px) rotate(-30deg);
+    }
+}
+
+
+@keyframes fly-animation {
+    0% {
+        transform: translateX(0px) rotate(10deg)
+    }
+
+    100% {
+        transform: translate(-1900px, -150px) rotate(15deg) scale(1.3);
     }
 }
 
